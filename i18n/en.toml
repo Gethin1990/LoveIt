@@ -193,3 +193,18 @@ other = "CHANGED"
 [deleted]
 other = "DELETED"
 # === shortcodes/version.html ===
+
+# === layouts/memories.html ===
+[memories]
+other = "MEMORIES"
+
+[memory]
+other = "MEMORY"
+
+# === layouts/memories.html ===
+
+# === layouts/booklist.html ===
+[booklist]
+other = "BOOKLIST"
+
+# === layouts/booklist.html ===
