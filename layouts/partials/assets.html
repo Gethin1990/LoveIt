@@ -170,11 +170,11 @@
     {{- $config = $cookieconsentConfig | dict "cookieconsent" | merge $config -}}
 {{- end -}}
 
-{{- /* custom jquery */ -}}
+{{- /* custom cdn jqueryJS  */ -}}
 {{- $source := $cdn.jqueryJS | default ( resources.Get "js/jquery.min.js" ) -}}
 {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 
-{{- /* custom backstretch */ -}}
+{{- /* custom cdn backstretch */ -}}
 {{- $source := $cdn.backstretch |  default ( resources.Get "js/jquery.backstretch.min.js") -}}
 {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 
