@@ -158,6 +158,19 @@
     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 {{- end -}}
 
+{{- /* MindMap */ -}}
+    {{- $source := $cdn.kity | default "js/kity.min.js" -}}
+    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+    {{- $source := $cdn.kityminder | default "js/kityminder.core.min.js" -}}
+    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+    {{- $source := $cdn.mindmap | default "js/mindmap.min.js" -}}
+    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+    {{- $source := $cdn.mindmapcss | default "css/mindmap.css" -}}
+    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+    {{- $source := $cdn.kitymindercss | default "css/kityminder.core.css" -}}
+    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+
+
 {{- /* Cookie Consent */ -}}
 {{- if .Site.Params.cookieconsent | and .Site.Params.cookieconsent.enable -}}
     {{- $source := $cdn.cookieconsentCSS | default "lib/cookieconsent/cookieconsent.min.css" -}}
