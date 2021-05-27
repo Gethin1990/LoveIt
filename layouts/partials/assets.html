@@ -178,6 +178,10 @@
 {{- $source := $cdn.backstretch |  default ( resources.Get "js/jquery.backstretch.min.js") -}}
 {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
 
+{{- /* custom cdn jqueryJS  */ -}}
+{{- $source := $cdn.dayjs | default ( resources.Get "js/dayjs.min.js" ) -}}
+{{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
+
 {{- /* MindMap */ -}}
 {{- if (.Scratch.Get "this").mindmap -}}
     {{- $source := $cdn.kity | default "js/kity.min.js" -}}
