@@ -98,10 +98,9 @@
     }
 
     > h2,
-    > h3,
-    > h4,
-    > h5,
-    > h6 {
+    h3,
+    h4
+    {
       > .header-mark::before {
         content: "|";
         margin-right: .3125rem;
@@ -112,9 +111,17 @@
         }
       }
     }
-
-    > h2 > .header-mark::before {
-      content: "#";
+    > h3 > .header-mark::before {
+      content: "-";
+    }
+    > h4 > .header-mark::before {
+      content: "--";
+    }
+    > h5,
+    > h6 {
+      [theme=dark] & {
+        color: $single-link-color-dark;
+      }
     }
 
     p {
