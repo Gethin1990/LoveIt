@@ -256,8 +256,8 @@ other = "记忆"
 
 # === layouts/memories.html ===
 
-# === layouts/booklist.html ===
-[booklist]
-other = "书单"
+# === layouts/keypoint.html ===
+[keypoint]
+other = "关键信息"
 
-# === layouts/booklist.html ===
+# === layouts/keypoint.html ===
